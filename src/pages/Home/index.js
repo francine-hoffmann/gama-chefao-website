@@ -17,7 +17,7 @@ function Home (){
     const [categories, setCategories] = React.useState(null);
 
     React.useEffect(() => {
-      fetch("/api/api/categorias?limite=6", {
+      fetch("/api/categorias?limite=6", {
         method: "GET",
         headers: {
           "access-control-allow-origin" : "*"
