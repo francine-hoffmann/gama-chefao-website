@@ -27,14 +27,14 @@ function DetalhesProduto() {
     const [avaliacoes, setAvaliacoes] = React.useState(null);
 
     React.useEffect(() => {
-        fetch("/avaliacao/produto/" + searchParams.get("idProduto"))
+        fetch("/api/avaliacao/produto/" + searchParams.get("idProduto"))
             .then((res) => res.json())
             .then((data) => setAvaliacoes(data));
     }, [searchParams]);
 
     const [produto, setProduto] = React.useState(null);
     React.useEffect(() => {
-        fetch("/produtos/" + searchParams.get("idProduto"))
+        fetch("/api/produtos/" + searchParams.get("idProduto"))
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);

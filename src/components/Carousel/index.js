@@ -10,7 +10,7 @@ function Carousel() {
   const [carouselItems, setCarouselItems] = React.useState(null);
 
     React.useEffect(() => {
-      fetch("/carrosel")
+      fetch("/api/carrosel")
         .then((res) => res.json())
         .then((data) => setCarouselItems(data));
     }, []);
