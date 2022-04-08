@@ -15,12 +15,12 @@ function Produtos (){
     const buscarProdutos = (categoria) => {
         
         if (categoria != 0) {
-            fetch("/api/produtos/categoria/" + categoria)
+            fetch("/produtos/categoria/" + categoria)
             .then((res) => res.json())
             .then((data) => setProdutos(data));
         }
         else {
-            fetch("/api/produtos")
+            fetch("/produtos")
             .then((res) => res.json())
             .then((data) => setProdutos(data));
         }
@@ -31,7 +31,7 @@ function Produtos (){
 
     const [categories, setCategorias ] = React.useState(null);
     React.useEffect(() => {
-        fetch("/api/categorias")
+        fetch("/categorias")
             .then((res) => res.json())
             .then((data) => setCategorias(data));
 

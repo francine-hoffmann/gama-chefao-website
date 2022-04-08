@@ -32,7 +32,7 @@ import * as S from "./style"
               mensagem: mensagem
           }));
           try {
-            let res = await fetch("/api/contato", {
+            let res = await fetch("/contato", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"

@@ -13,7 +13,7 @@ function Newsletter() {
             email: email
         }));
         try {
-          let res = await fetch("/api/newsletters", {
+          let res = await fetch("/newsletters", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
