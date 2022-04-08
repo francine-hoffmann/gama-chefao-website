@@ -17,7 +17,7 @@ function Home (){
     const [categories, setCategories] = React.useState(null);
 
     React.useEffect(() => {
-      fetch("https://gama-chefao-website.herokuapp.com/categorias?limite=6")
+      fetch("https://gama-chefao-api.herokuapp.com/categorias?limite=6")
         .then((res) => res.json())
         .then((data) => setCategories(data));
     }, []);
